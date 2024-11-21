@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #121212;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    margin: 20px 0;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff;
+  }
+  
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px 0;
+  }
+  
+  .cell {
+    width: 100px;
+    height: 100px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    font-size: 36px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 0 5px #0ff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+  }
+  
+  .cell:hover {
+    background-color: #33333399;
+    box-shadow: 0 0 15px #0ff;
+  }
+  
+  .cell.taken {
+    pointer-events: none;
+  }
+  
+  .cell.x {
+    color: #ff0000; /* Red neon for X */
+    /* text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000; */
+  }
+  
+  .cell.o {
+    color: #00ff00; /* Green neon for O */
+    /* text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 30px #00ff00; */
+  }
+  
+  #reset-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0ff;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  #reset-button:hover {
+    background-color: #00b3b3;
+  }
+  
+  .dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    box-shadow: 0 0 20px #0ff;
+    padding: 20px;
+    text-align: center;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .dialog.hidden {
+    display: none;
+  }
+  
+  #close-dialog {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0ff;
+    color: #121212;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0ff;
+    margin-top: 10px;
+  }
+  
+  #close-dialog:hover {
+    background-color: #00b3b3;
+  }
+  
